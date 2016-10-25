@@ -9,6 +9,7 @@ public class oneTest {
     public void test1(){
         System.out.println("yes!");
         assertEquals("1","1");
+        System.out.println("OK"); 
     }
 
 }
