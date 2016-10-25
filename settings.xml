@@ -58,7 +58,8 @@ http://repo.alibaba-inc.com/nexus/content/groups/public
 </url>
 </repository>
 </repositories>
-<!--
+<!--test-->
+ <!--
  ======================================================================== 
 -->
 <!--   Repositories for maven plugins           -->
