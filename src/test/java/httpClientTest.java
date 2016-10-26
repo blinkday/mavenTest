@@ -31,12 +31,12 @@ public class httpClientTest {
         HttpGet httpGet = new HttpGet(url);
         CloseableHttpResponse response = httpClient.execute(httpGet);
 
-//        System.out.println("ÏìÓ¦Âë:" + response.getStatusLine().getStatusCode());
-//        »ñÈ¡·şÎñÆ÷ÏìÓ¦ÄÚÈİ
+//        System.out.println("å“åº”ç :" + response.getStatusLine().getStatusCode());
+//        è·å–æœåŠ¡å™¨å“åº”å†…å®¹
         String returnStr = EntityUtils.toString(response.getEntity());
-        System.out.println("ÏìÓ¦ÄÚÈİ:" + returnStr);
+        System.out.println("å“åº”å†…å®¹:" + returnStr);
 
-//        ×ª»»³Éjson¶ÔÏó
+//        è½¬æ¢æˆjsonå¯¹è±¡
         JSONObject jsonObject = JSONObject.fromObject(returnStr);
         String code = jsonObject.getString("status");
         String message = jsonObject.getString("message");
@@ -46,27 +46,27 @@ public class httpClientTest {
         System.out.println("data:"+strData);
 
         JSONObject jsonObjectData = JSONObject.fromObject(strData);
-//        »ñÈ¡ÀàÄ¿
+//        è·å–ç±»ç›®
         String strCategory = jsonObjectData.getString("cates");
         System.out.println("cates:"+strCategory);
-//        »ñÈ¡ÃÅµê
+//        è·å–é—¨åº—
         String strStores = jsonObjectData.getString("stores");
         System.out.println("stores:"+strStores);
-//        »ñÈ¡ÅÅĞò·½Ê½
+//        è·å–æ’åºæ–¹å¼
         String strSorts = jsonObjectData.getString("sorts");
         System.out.println(strSorts);
 
-//        ÀàÄ¿Ğ£Ñé
+//        ç±»ç›®æ ¡éªŒ
         assertFalse(strCategory.equals("[]"));
-        assertTrue(strCategory.indexOf("È«²¿")>0);
-//        ÃÅµêĞ£Ñé
+        assertTrue(strCategory.indexOf("å…¨éƒ¨")>0);
+//        é—¨åº—æ ¡éªŒ
         assertFalse(strStores.equals("[]"));
-        assertTrue(strStores.indexOf("zyj²âÊÔÃÅµê")>0);
-//        ÅÅĞòĞ£Ñé
+        assertTrue(strStores.indexOf("zyjæµ‹è¯•é—¨åº—")>0);
+//        æ’åºæ ¡éªŒ
         assertFalse(strSorts.equals("[]"));
-        assertTrue(strSorts.indexOf("¾àÀë×î½ü")>0);
+        assertTrue(strSorts.indexOf("è·ç¦»æœ€è¿‘")>0);
 
-//        ÊÍ·ÅÁ¬½Ó
+//        é‡Šæ”¾è¿æ¥
         httpGet.releaseConnection();
     }
 
@@ -94,7 +94,7 @@ public class httpClientTest {
 
         JSONObject jsonObject = JSONObject.fromObject(jsonStr);
         String ret = jsonObject.getString("ret");
-//        Ğ£Ñé·µ»ØÂë,0-·¢ËÍ³É¹¦
+//        æ ¡éªŒè¿”å›ç ,0-å‘é€æˆåŠŸ
         assertEquals(ret,"0");
 
 
