@@ -6,6 +6,6 @@ import static junit.framework.Assert.*;
 public class twoTest {
     @Test
     public void test2(){
-        System.out.println("no!");
+        System.out.println("有问题!");
     }
 }

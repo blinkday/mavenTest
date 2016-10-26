@@ -7,7 +7,7 @@ import static junit.framework.Assert.*;
 public class oneTest {
     @Test
     public void test1(){
-        System.out.println("yes!");
+        System.out.println("没问题!");
         assertEquals("1","1");
     }
 
