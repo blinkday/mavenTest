@@ -11,6 +11,7 @@ public class oneTest {
         assertEquals("1","1");
 
         System.out.println("OK");
+        System.out.println("xxx");
     }
 
 }
